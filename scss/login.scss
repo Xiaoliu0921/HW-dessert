@@ -1,0 +1,217 @@
+@import "CssReset";
+@import "_Mixin_header_footer";
+
+.login{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include desktop{
+        margin-top: 30px;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-bottom: 60px;
+    }
+
+    .login_interface{
+        
+        background: $color-darkgreen;
+
+        width: 100%;
+
+        @include desktop{
+            width: 40%;
+        }
+
+
+        .login_interface_title{
+            text-align: center;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            font-size: 36px;
+            color: white;
+
+            @include desktop{
+                padding-bottom: 0;
+            }
+
+        }
+
+
+        .login_interface_soicial_mobile{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $color-lightgreen;
+
+            @include desktop{
+                display: none;
+            }
+
+    
+            ul{
+                width: 84%;
+                display: flex;
+                
+                li{
+                    width: 33.3%;
+                    background: white;
+                    border: 0.1px solid $color-lightgreen;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    a{
+                        display: block;
+                        width: 100%;
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                        display: flex;
+                        justify-content: center;
+                        img{
+                            width: 50%;
+                        }
+                    }
+                }
+    
+            }
+    
+    
+        }
+
+        .login_interface_inputsection{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding-top: 30px;
+            padding-bottom: 30px;
+            
+
+            .login_interface_inputsection_entirerow{
+                
+                background: $color-lightgreen;
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                width: 80%;
+                
+                
+                
+                
+                span{
+                    width: 10%;
+                    text-align: center;
+                    font-size: 20px;
+                    
+                }
+
+                input{
+                    width: 90%;
+                    background: none;
+                    border:none;
+                    font-size: 20px;
+                    
+                    &::placeholder{
+                        color: $color-green;
+                    }
+                }
+
+                
+
+
+            }
+
+            .login_interface_inputsection_remember{
+                display: flex;
+                align-self: flex-start;
+                padding-left: 10%;
+
+                input{
+                    width: 20px;
+                }
+
+                p{
+                    font-size: 20px;
+                    color: white;
+                }
+
+            }
+
+
+        }
+
+        
+
+
+
+    }
+
+    
+    .login_interface_loginbtn{
+
+        width: 100%;
+        a{
+            display: block;
+            width: 100%;
+            color: $color-darkgreen;
+            font-size: 28px;
+            background: $color-yellow;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    
+
+    }
+
+
+
+
+
+    .login_soicial_desktop{
+        display: none;
+        width: 40%;
+        background: $color-lightgreen;
+        @include desktop{
+            display: block;
+        }
+
+        p{
+            font-size: 28px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            color: $color-green;
+            text-align: center;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            li{
+                background: white;
+                width: 85%;
+                margin-bottom: 15px;
+
+                a{
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        height: 30px;
+                    }
+                }
+            }
+        }
+
+    }
+
+}

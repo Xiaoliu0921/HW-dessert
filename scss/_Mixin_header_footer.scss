@@ -1,0 +1,254 @@
+$color-darkgreen:#3F5D45;
+$color-green:#8DA291;
+$color-lightgreen:#EAF0ED;
+$color-yellow:#FFE180;
+
+
+@mixin desktop{
+    @media screen and (min-width: 960px){
+        @content
+    }
+}
+
+@mixin TextToImg($url,$width,$height){
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: $width;
+    height: $height;
+    text-indent: 110%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.font_bold{
+    font-weight: bold;
+}
+
+header{
+    padding-right: 4%;
+    padding-left: 4%;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+
+    @include desktop(){
+        height: 80px;
+    }
+
+    .img_Logo_Desktop{
+        @include TextToImg("../img/logo-all-dark.svg",220px, 40px);
+        display: none;
+
+        @include desktop{
+            display: block;
+        }
+    }
+
+    .navbar_mobile{
+        @include TextToImg("../img/dehaze-24px.png",24px , 24px);
+
+        @include desktop(){
+            display: none;
+        }
+    }
+
+    .img_LOGO_mobile{
+        @include TextToImg("../img/logotype-sm-dark.svg",115px ,18px );
+
+        @include desktop{
+            display: none;
+        }
+    }
+
+    .navmenu_cart{
+        display: flex;
+
+        ul{
+            display: none;
+
+            @include desktop(){
+                display: flex;
+                align-items: center;
+                margin-right: 30px;
+                li{
+                    padding-right: 30px;
+                    padding-left: 30px;
+                    margin-right: 5px;
+                    
+                    a{
+                        color: $color-darkgreen;
+                        font-weight: bold;
+                        font-size: 20px;
+                        
+                    }
+                }
+
+                
+            }
+
+        }
+
+        
+    }
+
+
+}
+
+
+footer{
+        
+    .footer_mail_bar{
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background: $color-darkgreen;
+        color: white;
+        font-size: 28px;
+        .footer_logo_text{
+            
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            .img_footer_mail_logo{
+                @include TextToImg("../img/logo-light.svg",40px ,40px );
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+        }
+
+        .footer_mail_bar_mailbox{
+            height: 60px;
+            width: 80%;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+
+            @include desktop(){
+                width: 380px;
+            }
+
+
+        }
+
+        .footer_mail_bar_mailbox_mailicon{
+            background: $color-lightgreen;
+            @include TextToImg("../img/mail-24px.png",20% , 100%);
+            background-size: 40%;
+            background-position: 50% 50%;
+            
+        }
+
+        .footer_mail_bar_mailbox_input{
+            background: $color-lightgreen;
+            height: 100%;
+            width: 60%;
+            display: block;
+            border: none;
+            font-size: 28px;
+            color: $color-darkgreen;
+        }
+
+        .footer_mail_bar_mailbox_arrow{
+            background: $color-yellow;
+            @include TextToImg("../img/arrow_forward-24px.png",20% , 100%);
+            background-size: 40%;
+            background-position: 50% 50%;
+        }
+
+
+    }
+
+    .footer_bottom{
+        padding-top: 20px;
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-bottom: 20px;
+        background: $color-lightgreen;
+        color: $color-darkgreen;
+
+        @include desktop(){
+            display: flex;
+            justify-content: space-between;
+            padding-left: 17%;
+            padding-right: 17%;
+        }
+
+        .footer_bottom_left{
+            display: flex;
+            flex-direction: column;
+
+            @include desktop(){
+                justify-content: space-between;
+            }
+
+            .footer_bomttom_logo{
+                @include TextToImg("../img/logotype-sm-dark.svg",172px ,27px );
+                margin-bottom: 30px;
+
+                @include desktop(){
+                    margin-bottom: 0;
+                }
+            }
+
+            .footer_bomttom_text1{
+                margin-bottom: 20px;
+                font-size: 20px;
+                @include desktop(){
+                    margin-bottom: 0;
+                    margin-top: 60px;
+                }
+            }
+            
+            .footer_bottom_SocialIcon{
+
+                display: flex;
+                margin-bottom: 15px;
+
+                @include desktop(){
+                    margin-bottom: 0;
+                }
+
+                .footer_bottom_SocialIcon_Line{
+                    @include TextToImg("../img/ic-line@.svg",32px ,32px );
+                    margin-right:20px;
+                }
+
+                .footer_bottom_SocialIcon_FB{
+                    @include TextToImg("../img/ic-facebook.svg",32px ,32px );
+                }
+            }
+
+        }
+
+        .footer_bottom_right{
+            display: flex;
+            flex-direction: column;
+
+            .footer_bottom_right_img{
+                display: none;
+                @include TextToImg("../img/sm-今天是個吃甜點的好日子.svg",60px ,220px );
+                
+                @include desktop(){
+                    display: block;
+                    align-self: flex-end;
+                    margin-bottom: 15px;
+                }
+            }
+
+
+        }
+
+    }
+
+}
+
+
+

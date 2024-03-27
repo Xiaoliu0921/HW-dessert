@@ -1,0 +1,259 @@
+@import "CssReset";
+@import "_Mixin_header_footer";
+
+.banner{
+
+    
+    @include desktop{
+        padding-right: 4%;
+        padding-left: 4%;
+        margin-bottom: 30px;
+    }
+
+    img{
+        width: 100%;
+    }
+}
+
+.section1{
+    
+    @include desktop{
+        display: flex;
+    }
+
+
+    .section1_left{
+        
+        margin-bottom: 30px;
+
+        @include desktop{
+
+            width: 30%;
+            padding-left: 4%;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            font-weight: bold;
+            font-size: 28px;
+
+            
+
+            li{
+                width: 100%;
+                border: 1px solid $color-lightgreen;
+                text-align: center;
+
+                a{
+                    display: block;
+                    height: 100%;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    color:$color-darkgreen;
+                    &:hover{
+                        background: $color-lightgreen;
+                    }
+                }
+            }
+
+            .section1_left_title{
+                padding-top: 15px;
+                padding-bottom: 15px;
+                background: $color-darkgreen;
+                color:white;
+            }
+            
+        }
+    }
+    
+
+    .section1_right{
+  
+        @include desktop{
+            width: 70%;
+            padding-right: 4%;
+        }
+
+        .section1_products{
+            
+            display: flex;
+            flex-wrap: wrap;
+
+            .section1_product{
+            
+                margin-bottom: 30px;
+                padding-left: 4%;
+                padding-right: 4%;
+                width: 100%;
+
+                @include desktop{
+                    width: 50%;
+                    
+                }
+        
+                .section1_product_imgs{
+                    border: 0.1px solid $color-green;
+                    aspect-ratio: 1/1.05;
+                    position: relative;
+                    .section1_product_name_price_featured{
+                        writing-mode: vertical-lr;
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        background: $color-darkgreen;
+                        color: white;
+                        font-weight: bold;
+                        letter-spacing: 3px;
+                        position: absolute;
+                        left: 5%;
+                        
+                    }
+        
+                    .section1_product_favorite{
+                        position: absolute;
+                        width: 6%;
+                        right: 5%;
+                        top:3%;
+                    }
+        
+                }
+        
+                .section1_product_name_price{
+                    display: flex;
+                    
+                    p{
+                        width: 50%;
+                        text-align: center;
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                        color: $color-darkgreen;
+                        font-size: 20px;
+                        border: 0.1px solid $color-green;
+                    }
+                }
+        
+                .section1_product_cartbtn{
+                    border: 0.1px solid $color-green;
+                    a{
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                        display: block;
+                        text-decoration: none;
+                        text-align: center;
+                        font-weight: bold;
+                        font-size: 20px;
+                        color: $color-darkgreen;
+                        background: $color-lightgreen;
+                    }
+                }
+            }
+        
+            .section1_product1{
+                .section1_product_img{
+                    @include TextToImg("../img/p-2.png",auto,100%);
+                }        
+            }
+        
+            .section1_product2{
+                @include desktop{display: block;}
+                .section1_product_img{
+                    @include TextToImg("https://bit.ly/2zBDAxX",auto,100%);
+                }
+            }
+        
+            .section1_product3{
+                @include desktop{display: block;}
+                .section1_product_img{
+                    @include TextToImg("https://bit.ly/2QbVsVR",auto,100%);
+                }
+            }
+
+            .section1_product4{
+                display: none;
+                @include desktop{display: block;}
+                .section1_product_img{
+                    @include TextToImg("https://bit.ly/2QbVsVR",auto,100%);
+                }
+            }
+
+            .section1_product5{
+                display: none;
+                @include desktop{display: block;}
+                .section1_product_img{
+                    @include TextToImg("https://bit.ly/2QbVsVR",auto,100%);
+                }
+            }
+
+            .section1_product6{
+                display: none;
+                @include desktop{display: block;}
+                .section1_product_img{
+                    @include TextToImg("https://bit.ly/2QbVsVR",auto,100%);
+                }
+            }
+
+        }
+
+
+        .section1_product_pages{
+            display: flex;
+            justify-content: center;
+            padding-left: 4%;
+            padding-right: 4%;
+
+            @include desktop{
+                justify-content: flex-end;
+            }
+
+            ul{
+                display: flex;
+                justify-content: center;
+                width: 90%;
+                margin-bottom: 30px;
+
+                @include desktop{
+                    width: 50%;
+                    justify-content: flex-end;
+                }
+
+                li{
+
+                    width: 15%;
+                    border: 1px solid $color-lightgreen;
+
+                    a{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+                        font-size: 20px;
+                        color: $color-darkgreen;
+                        width: 100%;
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+
+                    }
+
+
+                    
+                }
+
+                .present_page{
+                    a{
+                        color: white;
+                        background: $color-darkgreen;
+                    }
+                }
+
+            }
+
+
+        }
+
+
+
+
+    }
+}

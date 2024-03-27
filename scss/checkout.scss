@@ -1,0 +1,287 @@
+@import "CssReset";
+@import "_Mixin_header_footer";
+
+
+
+.section{
+
+    
+    @include desktop{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        margin-top: 30px;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-bottom: 60px;
+    }
+
+    .section_CheckInterface{
+        
+        padding-top: 30px;
+        background: $color-darkgreen;
+
+        @include desktop{
+            width: 40%;
+            margin-right: 20px;
+        }
+
+
+        .CheckInterface_InputSection{
+
+            padding-left: 4%;
+            padding-right: 4%;
+            margin-bottom: 30px;
+            p{
+                color: white;
+                font-size: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+    
+            input{
+                
+                color: $color-darkgreen;
+                background: $color-lightgreen;
+                border: none;
+                font-size: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                &::placeholder{
+                    color: $color-green;
+                }
+            }
+    
+            select{
+                color: $color-green;
+                background: $color-lightgreen;
+                border: none;
+                font-size: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                
+                &::placeholder{
+                    color: $color-green;
+                }
+
+            }
+            
+            div{
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+            }
+
+            .invoice{
+                display: flex;
+                border: 1px solid $color-lightgreen;
+                a{
+                    display: block;
+                    width: 50%;
+                    text-align: center;
+                    text-decoration: none;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    color: $color-lightgreen;
+                    font-size: 20px;
+                }
+
+                .invoice_present{
+                    background: $color-lightgreen;
+                    color: $color-darkgreen;
+                }
+            }
+
+            .address{
+               
+                display: flex;
+                .address_same{
+                    margin-bottom: 0;
+                    display: flex;
+                    justify-content: flex-end;
+                    input{
+                        width: 16px;
+                    }
+                    p{
+                        width: auto;
+                    }
+
+                }
+            }
+
+            .section_CheckInterface_TitleAndProgress{
+                p{
+                    font-size: 36px;
+                }
+                justify-content: space-between;
+
+                .Progress{
+                    display: flex;
+                    width: 40%;
+                    justify-content: space-between;
+
+                    span{
+                        display: block;
+                        background: $color-darkgreen;
+                        z-index: 2;
+                    }
+
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        border: 1px solid white;
+                        z-index: 1;
+                        width: 100%;
+                        top: 50%;
+
+                    }
+
+
+                }
+
+            }
+
+
+            .section_CheckInterface_HalfRow{
+                *{
+                    width: 48%;
+                }
+                justify-content: space-between;
+
+            }
+
+            .section_CheckInterface_EntireRow{
+                *{
+                    width: 100%;
+                }
+
+            }
+
+        }
+        
+        
+
+        
+
+        
+
+        .section_CheckInterface_NextStepBtn{
+            a{
+                font-size: 28px;
+                display: block;
+                text-decoration: none;
+                background: $color-yellow;
+                color: $color-darkgreen;
+                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+        }
+
+    }
+
+
+
+
+    .section_SummaryAndShoppingList{
+
+        width: 30%;
+        display: none;
+        @include desktop{
+            display: block;
+        }
+
+        h2{
+            font-size: 36px;
+            color: $color-green;
+            font-weight: bold;
+            text-align: center;
+            background: $color-lightgreen;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+
+        p{
+            font-size: 20px;
+            color: $color-green;
+        }
+
+
+        .ShoppingList_Summary{
+            border: 1px solid $color-lightgreen;
+            margin-bottom: 20px;
+            
+
+            div{
+                padding-left: 4%;
+                padding-right: 4%;
+                line-height: 2;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .Summary_total p{
+                font-size: 24px;
+            }
+
+        }
+
+        .ShoppingList{
+            border: 1px solid $color-lightgreen;
+ 
+            
+            .ShoppingList_products{
+                padding-left: 4%;
+                padding-right: 4%;
+                display: flex;
+                line-height: 2;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+
+                .ShoppingList_product_NameAndPrice{
+                    width: 55%;
+                }
+
+                span{
+                    display: block;
+                }
+
+                .img_ShoppingList_product{
+                    width: 40%;
+                    margin-bottom: 5%;
+                    display: flex;
+                    justify-content: center;
+                    
+                }
+
+            }
+
+            .ShoppingList_product1 .img_ShoppingList_product p{
+                
+                @include TextToImg("https://bit.ly/2QvsT63",auto,80px);
+                aspect-ratio: 1.5/1;
+                background-position: 50% 50%;
+            }
+            .ShoppingList_product2 .img_ShoppingList_product p{
+                
+                @include TextToImg("https://bit.ly/2zBDAxX",auto,80px);
+                aspect-ratio: 1.5/1;
+                background-position: 50% 50%;
+            }
+            .ShoppingList_product3 .img_ShoppingList_product p{
+                
+                @include TextToImg("https://bit.ly/2zKOP7w",auto,80px);
+                aspect-ratio: 1.5/1;
+                background-position: 50% 50%;
+            }         
+            
+
+
+        }
+
+    }
+
+}

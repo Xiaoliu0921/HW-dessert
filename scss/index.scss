@@ -1,0 +1,443 @@
+@import "CssReset";
+@import "_Mixin_header_footer";
+
+
+.section1{
+
+    margin-bottom: 10px;
+    @include desktop{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding-left: 4%;
+            padding-right: 4%;
+    }
+    
+    .section1_banner{
+
+        @include TextToImg("https://bit.ly/2OhbMHr",100% ,auto);
+        aspect-ratio: 1/0.77;
+        z-index: -2;
+        @include desktop{
+            aspect-ratio: 1/0.5;
+            background-position: 50% 50%;
+        }
+        
+    }
+
+    .section1_menu{
+
+        display: flex;
+        aspect-ratio: 2/1;
+        
+        @include desktop{
+            width: 80%;
+            aspect-ratio: 1/0.32;
+            margin-top: -20%;
+        }
+
+        li{
+            width: 33.3%;
+            writing-mode: vertical-lr;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0.1px solid white;
+        }
+        
+        
+
+        .section1_menu_btn1{
+            
+            position:relative;
+            &::after{
+                content:'';
+                position:absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                background-blend-mode: multiply;
+                background-color: $color-darkgreen;
+                opacity: 0.8;
+                z-index:-1;      
+            }
+
+            &::before{
+                content:'';
+                position:absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                background-blend-mode: multiply;
+                background-image: url("https://bit.ly/2R5tqwD");
+                background-size: cover;
+                filter: blur(10px);
+                z-index:-2;
+            }
+
+            &:hover{
+                &::after{
+                background-color:$color-yellow;
+                }                
+            }
+            
+        }
+
+        .section1_menu_btn2{
+
+            position:relative;
+            &::after{
+                content:'';
+                position:absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                background-blend-mode: multiply;
+                background-color: $color-darkgreen;
+                opacity: 0.8;
+                z-index:-1;      
+            }
+
+            &::before{
+                content:'';
+                position:absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                background-blend-mode: multiply;
+                background-image: url("https://bit.ly/2Dwoxd7");
+                background-size: cover;
+                filter: blur(10px);
+                z-index:-2;
+            }
+
+            &:hover{
+                &::after{
+                background-color:$color-yellow;
+                }                
+            }
+
+        }
+
+        .section1_menu_btn3{
+            
+            position:relative;
+            &::after{
+                content:'';
+                position:absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                background-blend-mode: multiply;
+                background-color: $color-darkgreen;
+                opacity: 0.8;
+                z-index:-1;      
+            }
+
+            &::before{
+                content:'';
+                position:absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                background-blend-mode: multiply;
+                background-image: url("https://bit.ly/2OUteif");
+                background-size: cover;
+                filter: blur(10px);
+                z-index:-2;
+            }
+
+            &:hover{
+                &::after{
+                background-color:$color-yellow;
+                }                
+            }
+
+        }
+        
+        a{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            letter-spacing:5px;
+            font-weight: bold;
+            color: white;
+
+            @include desktop{
+                font-size: 30px;
+                letter-spacing:10px;
+            }
+
+            &:hover{
+                color: $color-darkgreen;
+                font-weight: bold;
+            }
+        }
+
+    }
+
+
+}
+
+.section2{
+
+    .section2_title{
+        @include TextToImg("../img/sm-橫式-為什麼選擇了做甜點.svg",100%,auto);
+        
+        @include desktop{
+            order:1;
+            background-image: url("../img/lg-為什麼選擇了做甜點.svg");
+        }
+    }
+
+    .section2_img{
+        @include TextToImg("https://bit.ly/2xPn7Eq",100%,auto);
+
+        @include desktop{
+            order:-1;   
+        }
+
+    }
+
+    .section2_text{
+
+        @include desktop{
+            order:0;   
+        }
+
+    }
+
+}
+
+.section3{
+
+    .section3_title{
+        @include TextToImg("../img/sm-橫式-為什麼一定要吃甜點.svg",100%,auto);
+        
+        @include desktop{
+            order:0;
+            background-image: url("../img/lg-為什麼一定要吃甜點.svg");
+        }
+    }
+
+    .section3_img{
+        @include TextToImg("https://bit.ly/2zzAQS4",100%,auto);
+
+        @include desktop{
+            order:1;   
+        }
+
+    }
+
+    .section3_text{
+
+        @include desktop{
+            order:-1;   
+        }
+
+    }
+
+}
+
+
+.section2_3{
+    display: flex;
+    flex-direction: column;
+    color: $color-green;
+
+    @include desktop{
+        padding-left: 4%;
+        padding-right: 4%;
+        flex-direction: row;
+        justify-content:space-around;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        position: relative;
+        &::after{
+            content:'';
+            position:absolute;
+            top:10%;
+            left:0;
+            width: 100%;
+            height: 80%;
+            background-color: $color-lightgreen;
+            z-index:-1;      
+        }
+    }
+
+    .section2_3_title{
+        aspect-ratio: 1/0.32;
+        background-size: 50% 50%;
+        background-position: 50% 50%;
+        @include desktop{
+            width: 15%;
+            background-size: 70%;
+            background-position: 50% 0;
+        }
+    }
+
+
+    .section2_3_img{
+        background-size: 100% auto;
+        background-position: 50% 50%;
+        aspect-ratio: 1/0.66;
+
+        @include desktop{
+            width: 50%;
+            aspect-ratio: 1/1;
+        }
+    }
+
+    .section2_3_text{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 4%;
+        padding-right: 4%;
+        font-size: 20px;
+        line-height: 2;
+        background: $color-lightgreen;
+
+        @include desktop{
+            padding-top: 8%;
+            padding-bottom: 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 35%;
+            font-size: 28px;
+            writing-mode: vertical-rl;
+            background: none;
+        }
+
+    }
+
+
+}
+
+.section4{
+    .section4_banner{
+        @include TextToImg("../img/sm-橫式-想吃甜點是不需要理由的.svg",100%,auto);
+        aspect-ratio: 1/0.32;
+        background-size: 50% 50%;
+        background-position: 50% 50%;
+
+        @include desktop{
+            background-image: url("../img/lg-想吃甜點是不需要理由的.svg");
+            aspect-ratio: 1/0.4;
+            background-size: auto 80%;
+        }
+
+    }
+}
+
+.section5{
+    padding-left: 4%;
+    padding-right: 4%;
+    font-size: 24px;
+
+    @include desktop{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    .section5_product{
+        
+        margin-bottom: 30px;
+        @include desktop{
+            width: 32%;
+        }
+
+        .section5_product_imgs{
+            border: 0.1px solid $color-green;
+            aspect-ratio: 1/1.05;
+            position: relative;
+            .section5_product_name_price_featured{
+                writing-mode: vertical-lr;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 10px;
+                padding-right: 10px;
+                background: $color-darkgreen;
+                color: white;
+                font-weight: bold;
+                letter-spacing: 3px;
+                position: absolute;
+                left: 5%;
+                
+            }
+
+            .section5_product_favorite{
+                position: absolute;
+                width: 6%;
+                right: 5%;
+                top:3%;
+            }
+
+        }
+
+        .section5_product_name_price{
+            display: flex;
+            
+            p{
+                width: 50%;
+                text-align: center;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                font-size: 20px;
+                color: $color-darkgreen;
+                border: 0.1px solid $color-green;
+            }
+        }
+
+        .section5_product_cartbtn{
+            border: 0.1px solid $color-green;
+            a{
+                padding-top: 15px;
+                padding-bottom: 15px;
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                font-weight: bold;
+                font-size: 20px;
+                color: $color-darkgreen;
+                background: $color-lightgreen;
+            }
+        }
+    }
+
+    .section5_product1{
+        .section5_product1_img{
+            @include TextToImg("../img/p-2.png",auto,100%);
+        }        
+    }
+
+    .section5_product2{
+        display: none;
+        @include desktop{display: block;}
+        .section5_product2_img{
+            @include TextToImg("https://bit.ly/2zBDAxX",auto,100%);
+        }
+    }
+
+    .section5_product3{
+        display: none;
+        @include desktop{display: block;}
+        .section5_product3_img{
+            @include TextToImg("https://bit.ly/2QbVsVR",auto,100%);
+        }
+    }
+}
+
